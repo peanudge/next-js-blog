@@ -7,6 +7,17 @@ import utilStyles from "../../styles/utils.module.css";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 
 export default function Post({ postData }) {
+  // TODO: why first postData is undefined?
+  // NextJS Static Generation 은 항상 맨 처음 호출을 해보나?
+  if (postData === undefined) {
+    return (
+      <Layout>
+        <Head>Empty Post</Head>
+        <h1>Empty Post</h1>
+      </Layout>
+    );
+  }
+
   return (
     <Layout>
       <Head>
