@@ -6,6 +6,11 @@ import html from "remark-html";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
+type BlogMetaData = {
+  date: string;
+  title: string;
+};
+
 export function getSortedPostsData() {
   // Get file names under /posts
   const filesNames = fs.readdirSync(postsDirectory);
@@ -18,7 +23,7 @@ export function getSortedPostsData() {
     const matterResult = matter(fileContents);
     return {
       id,
-      ...matterResult.data,
+      ...(matterResult.data as BlogMetaData),
     };
   });
 
