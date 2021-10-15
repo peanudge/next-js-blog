@@ -8,17 +8,11 @@ import Date from "../components/date";
 
 import { getSortedPostsData } from "../lib/posts";
 
-import { GetStaticProps } from "next";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
 
 export default function Home({
   allPostsData,
-}: {
-  allPostsData: {
-    date: string;
-    title: string;
-    id: string;
-  }[];
-}) {
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout home>
       <Head>
@@ -54,11 +48,12 @@ export default function Home({
   );
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
   return {
     props: {
       allPostsData,
     },
+    revalidate: 10,
   };
 };
