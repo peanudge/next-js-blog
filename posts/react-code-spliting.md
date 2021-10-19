@@ -5,6 +5,8 @@ date: "2021-10-19"
 
 # Code Splitting
 
+![TurtleNeck](https://user-images.githubusercontent.com/20085849/137941879-5b5f368e-ea38-4378-a5cb-858ef73be68c.png)
+
 https://ko.reactjs.org/docs/code-splitting.html
 
 리액트 고급 안내서에서 **코드분할**은 리액트에서 코드 분할을 어떻게 할 수 있는지를 보여줍니다. 하지만 우리가 코드 분할을 왜해야하는지 그리고 주의할 점이 무엇인지에 관해서는 내용이 부족한 것 같아서 정리해보겠습니다.
