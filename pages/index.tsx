@@ -18,12 +18,8 @@ export default function Home({
       <Head>
         <title>{siteTitle}</title>
       </Head>
-
       <section className={utilStyles.headingMd}>
-        <p>Hi my name is jiho I`m very Generalist Developer.</p>
-        <p>
-          (This is sample website - you`ll be building a site like this on){" "}
-        </p>
+        <p>Hi my name is Peanut Developer.</p>
       </section>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>

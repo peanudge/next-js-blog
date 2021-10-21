@@ -1,0 +1,27 @@
+.divider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  background: rgb(75, 159, 143);
+  background: linear-gradient(
+    90deg,
+    rgba(75, 159, 143, 1) 14%,
+    rgba(5, 231, 99, 0.47102591036414565) 100%
+  );
+}
+
+.dividerSVG {
+  position: relative;
+  display: block;
+  color: transparent;
+  width: calc(100% + 1.3px);
+  height: 100px;
+}
+
+.dividerShapeFill {
+  fill: #ffffff;
+}
